@@ -27,7 +27,7 @@ variable "alb_target_api" {
 ##############
 # Module
 ##############
-module "alb_tg_kephala_companion" {
+module "alb_tg_api" {
   source = "github.com/virsas/terraform_alb_target_ip"
   target = var.alb_target_api
   vpc_id  = module.vpc_main.id
