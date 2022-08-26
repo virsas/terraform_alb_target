@@ -28,7 +28,7 @@ variable "alb_target_api" {
 # Module
 ##############
 module "alb_tg_api" {
-  source = "github.com/virsas/terraform_alb_target_ip"
+  source = "git::https://github.com/virsas/terraform_alb_target_ip.git?ref=v1.0.0"
   target = var.alb_target_api
   vpc_id  = module.vpc_main.id
   instances = [ module.ec2_ecs1.private_ip, module.ec2_ecs2.private_ip ]
